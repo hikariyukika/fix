@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan - Modern</title>
+  <meta name="description" content="Undangan pernikahan modern dan elegan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .events {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .events .card {
+      flex: 1;
+      min-width: 300px;
+      padding: 16px;
+    }
+    @media (max-width: 768px) {
+      .events {
+        flex-direction: column;
+        align-items: center;
+      }
+      .events .card {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cover / Hero -->
+  <header id="cover" class="hero" data-date="2025-06-07T09:00:00+07:00" data-maps-url="https://www.google.com/maps/search/?api=1&query=Jl.+Veteran+No.129,+Ciseureuh,+Kec.+Purwakarta,+Kabupaten+Purwakarta,+Jawa+Barat+41118">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content container">
+      <div class="hero__photos">
+        <img class="hero__photo hero__photo--left" src="img/AFZ_2974.jpg" alt="Foto Pengantin Pria">
+        <img class="hero__photo hero__photo--right" src="img/AFZ_3350.jpg" alt="Foto Pengantin Wanita">
+      </div>
+
+      <h1 class="couple-name"><span data-groom>Andri</span> & <span data-bride>Yanti</span></h1>
+      <p class="event-date" data-event-text>Sabtu, 07 Juni 2025 • 09.00 WIB</p>
+
+      <div class="countdown" aria-label="Hitung mundur menuju acara">
+        <div class="countdown__item">
+          <span id="cd-days" class="countdown__value">00</span>
+          <span class="countdown__label">Hari</span>
+        </div>
+        <div class="countdown__item">
+          <span id="cd-hours" class="countdown__value">00</span>
+          <span class="countdown__label">Jam</span>
+        </div>
+        <div class="countdown__item">
+          <span id="cd-mins" class="countdown__value">00</span>
+          <span class="countdown__label">Menit</span>
+        </div>
+        <div class="countdown__item">
+          <span id="cd-secs" class="countdown__value">00</span>
+          <span class="countdown__label">Detik</span>
+        </div>
+      </div>
+
+      <div class="hero__actions">
+        <button class="btn btn--light" data-open-invite aria-label="Buka undangan">Lihat Undangan</button>
+        <button class="btn btn--light" data-open-maps aria-label="Lihat lokasi">Lihat Lokasi</button>
+      </div>
+    </div>
+
+    <svg class="hero__divider" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,96L60,80C120,64,240,32,360,26.7C480,21,600,43,720,69.3C840,96,960,128,1080,138.7C1200,149,1320,139,1380,133.3L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" fill="currentColor"/>
+    </svg>
+
+    <!-- Gate (pembuka undangan) -->
+    <div class="invite-gate" data-gate>
+      <div class="invite-gate__card">
+        <div class="invite-gate__title">Undangan Pernikahan</div>
+        <div class="invite-gate__names">Andri & Yanti</div>
+        <div class="invite-gate__date">Sabtu, 07 Juni 2025 • 09.00 WIB</div>
+        <button class="btn btn--light invite-gate__btn" data-open-invite>🎉 Buka Undangan</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Profil Mempelai -->
+  <section id="profiles" class="section section--light">
+    <div class="container">
+      <h2 class="section__title">Profil Mempelai</h2>
+      <div class="profiles">
+        <article class="profile card" data-observe>
+          <img src="img 2/AFZ_2858.jpg" alt="Pengantin Pria" class="profile__photo">
+          <div class="profile__body">
+            <h3 class="profile__name" data-groom>Andri</h3>
+            <p class="profile__desc">Anak kedua dari Bapak JANTER SARAGI NAPITU dan Ibu TIAJA NAINGGOLAN</p>
+          </div>
+        </article>
+        <article class="profile card" data-observe>
+          <img src="img 2/AFZ_3153.jpg" alt="Pengantin Wanita" class="profile__photo">
+          <div class="profile__body">
+            <h3 class="profile__name" data-bride>Yanti</h3>
+            <p class="profile__desc">Anak pertama dari Bapak JANNUS BERHAMEN PAKPAHAN dan Ibu MARLIANNA SILALAHI</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cerita Kami -->
+  <section id="story" class="section section--gradient">
+    <div class="container">
+      <h2 class="section__title section__title--light">Cerita Kami</h2>
+      <div class="story">
+        <p class="story__intro">Kami dipertemukan oleh keluarga pada tanggal 26 Agustus 2023 di acara pernikahan saudara. Muka saling tersipu malu sembari mata mencuri pandangan menghilangkan rasa penasaran parasnya.
+</p>
+        <div class="story__timeline">
+          <div class="story-item card" data-observe>
+            <div class="story-item__date">2023</div>
+            <div class="story-item__title">Pendekatan</div>
+            <div class="story-item__text">“Org silom nonton laga final”
+“Syalom salam kenal”
+Sebuah pantun membuka awal pembicaraan hingga bertukar cerita yang tanpa disadari menjadi rasa sayang dan cinta yang tidak terduga..</div>
+          </div>
+          <div class="story-item card" data-observe>
+            <div class="story-item__date">2023</div>
+            <div class="story-item__title">Menjalin Hubungan</div>
+            <div class="story-item__text">14 Oktober 2023 dengan bermodalkan buku yang berisi cerita pendekatan kita menjadi saksi kita berpacaran. “Suatu masalah diselesaikan dengan kepala dingin dan selesai sebelum berganti hari” menjadi komitmen yang menjaga keharmonisan hubungan kami berdua. </div>
+          </div>
+          <div class="story-item card" data-observe>
+            <div class="story-item__date">2025</div>
+            <div class="story-item__title"> Menikah</div>
+            <div class="story-item__text">7 Juni 2025 menjadi langkah baru bagi kami untuk membina bahtera rumah tangga. Dengan keyakinan dan kepercayaan bahwa inilah berkat yang Tuhan anugerahkan, kami sepakat untuk mengikat janji suci dalam pernikahan..</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lokasi Acara -->
+  <section id="location" class="section section--light">
+    <div class="container">
+      <h2 class="section__title">Lokasi Acara</h2>
+      <div class="events">
+        <div class="card">
+          <strong>Event 1 : PEMBERKATAN</strong><br>
+          Hari, Tanggal : SABTU, 07 JUNI 2025<br>
+          Waktu : 09.00 WIB<br>
+          Lokasi : HKBP PURWAKARTA<br>
+          Alamat : Jl. Veteran No.129, Ciseureuh, Kec. Purwakarta, Kabupaten Purwakarta, Jawa Barat 41118<br>
+          <button class="btn btn--light" data-open-maps-event="https://www.google.com/maps/search/?api=1&query=Jl.+Veteran+No.129,+Ciseureuh,+Kec.+Purwakarta,+Kabupaten+Purwakarta,+Jawa+Barat+41118">Buka di Google Maps</button>
+        </div>
+        <div class="card">
+          <strong>Event 2 : RESEPSI PESTA ADAT</strong><br>
+          Hari, Tanggal : SABTU, 07 JUNI 2025<br>
+          Waktu : 11.30 WIB<br>
+          Lokasi : HKBP PURWAKARTA<br>
+          Alamat : Jl. Veteran No.129, Ciseureuh, Kec. Purwakarta, Kabupaten Purwakarta, Jawa Barat 41118<br>
+          <button class="btn btn--light" data-open-maps-event="https://www.google.com/maps/search/?api=1&query=Jl.+Veteran+No.129,+Ciseureuh,+Kec.+Purwakarta,+Kabupaten+Purwakarta,+Jawa+Barat+41118">Buka di Google Maps</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri Prewedding -->
+  <section id="gallery" class="section section--gradient">
+    <div class="container">
+      <h2 class="section__title section__title--light">Galeri Prewedding</h2>
+      <div class="gallery" data-observe>
+        <a href="img/AFZ_2974.jpg" class="gallery__item" data-lightbox>
+          <img src="img/AFZ_2974.jpg" alt="Prewedding 1">
+        </a>
+        <a href="img/AFZ_3350.jpg" class="gallery__item" data-lightbox>
+          <img src="img/AFZ_3350.jpg" alt="Prewedding 2">
+        </a>
+        <a href="img 2/AFZ_2858.jpg" class="gallery__item" data-lightbox>
+          <img src="img 2/AFZ_2858.jpg" alt="Prewedding 3">
+        </a>
+        <a href="img 2/AFZ_2978 (1).jpg" class="gallery__item" data-lightbox>
+          <img src="img 2/AFZ_2978 (1).jpg" alt="Prewedding 4">
+        </a>
+        <a href="img 2/AFZ_3153.jpg" class="gallery__item" data-lightbox>
+          <img src="img 2/AFZ_3153.jpg" alt="Prewedding 5">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" class="section section--light">
+    <div class="container">
+      <h2 class="section__title">Konfirmasi Kehadiran</h2>
+      <div class="card" style="padding:16px;">
+        <form id="rsvp-form" class="rsvp-form">
+          <div class="rsvp-grid">
+            <div class="rsvp-field">
+              <label for="rsvp-name">Nama</label>
+              <input id="rsvp-name" type="text" placeholder="Nama Anda" required>
+            </div>
+            <div class="rsvp-field">
+              <label for="rsvp-count">Jumlah Orang</label>
+              <select id="rsvp-count" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="rsvp-actions">
+              <button class="btn btn--light" type="submit">Kirim</button>
+            </div>
+          </div>
+        </form>
+        <p id="rsvp-total" class="rsvp-total">Total orang yang akan datang: 0</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift / Amplop Digital -->
+  <section id="gift" class="section section--gradient">
+    <div class="container">
+      <h2 class="section__title section__title--light">Hadiah & Doa</h2>
+      <div class="gift card" style="padding:16px;">
+        <p class="gift__text">Doa restu merupakan hadiah terindah. Jika berkenan berbagi hadiah, berikut rekening dan QR:</p>
+        <div class="gift__grid">
+          <div class="gift-field">
+            <div class="gift-label">Bank BCA</div>
+            <div class="gift-value" data-copy-text>1570175196 </div>
+            <button class="btn btn--light gift-copy" data-copy="1570175196 ">Salin Nomor</button>
+            <div class="gift-name">a.n. Yanti</div>
+          </div>
+          <div class="gift-field">
+            <div class="gift-label">Bank BCA</div>
+            <div class="gift-value" data-copy-text> 2310405496 </div>
+            <button class="btn btn--light gift-copy" data-copy=" 2310405496 ">Salin Nomor</button>
+            <div class="gift-name">a.n. Andri</div>
+          </div>
+          <div class="gift-qr">
+            <img src="img/qr-gift.png" alt="QR Pembayaran" />
+            <div class="gift-qr__hint">Scan QR untuk gift</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Dengan hormat kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberi doa restu.</p>
+      <p class="small">Made with love • © 2025</p>
+    </div>
+  </footer>
+
+  <audio id="wedding-music" preload="auto">
+    <source src="sound/1.mp3" type="audio/mpeg">
+    <!-- Fallback: You can replace with a public URL or upload your own music file -->
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
